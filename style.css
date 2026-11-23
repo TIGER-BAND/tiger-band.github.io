@@ -83,3 +83,22 @@ footer { color:#f5f0e4; background:var(--ink); }
   .services a { flex-direction:row; align-items:center; justify-content:space-between; padding:1rem 0; }
   .foot { flex-direction:column; align-items:flex-start; gap:1.5rem; }
 }
+
+.guide-link { margin-top: .8rem; font-size: 1rem; }
+.guide-link a, .guide a { text-decoration: underline; text-underline-offset: .25em; }
+.guide-link a:hover, .guide a:hover { color: var(--clay); }
+.guide { width: min(86%, 46rem); margin: clamp(3rem, 7vw, 6rem) auto; }
+.guide h1 { font-size: clamp(2.4rem, 6vw, 4.1rem); letter-spacing: -.055em; line-height: 1.24; }
+.guide .lede { font-size: 1.18rem; line-height: 1.85; margin-top: 1.5rem; }
+.guide section { border-top: 1px solid var(--line); margin-top: 2.2rem; padding-top: 1.6rem; }
+.guide h2 { font: 700 1.65rem/1.4 var(--serif); margin-bottom: .8rem; }
+.guide section p { line-height: 1.8; }
+.guide .track-info { color: #51594f; font-size: .94rem; }
+.tracklist { padding-left: 1.8rem; margin: 1.3rem 0 0; }
+.tracklist li { padding-left: .3rem; margin-block: 1.4rem; }
+.tracklist li::marker { color: var(--clay); }
+.tracklist h3 { font: 700 1.35rem var(--serif); margin: 0 0 .3rem; }
+.track-info + p { margin-top: .6rem; }
+.track-links { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; margin-top: .55rem; }
+.track-links a, .guide .email { display: inline-block; padding-block: .4rem; }
+html[lang="en"] .guide { word-break: normal; }
