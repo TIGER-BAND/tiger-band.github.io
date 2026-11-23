@@ -1,0 +1,80 @@
+@font-face { font-family: 'Tigers Myeongjo'; font-style: normal; font-weight: 400; font-display: swap; src: url('./fonts/myeongjo-400.ttf') format('truetype'); }
+@font-face { font-family: 'Tigers Myeongjo'; font-style: normal; font-weight: 700; font-display: swap; src: url('./fonts/myeongjo-700.ttf') format('truetype'); }
+:root {
+  --paper: #f8f5ec;
+  --ink: #1f302e;
+  --clay: #9d4930;
+  --line: #c9c9bb;
+  --serif: "Tigers Myeongjo", "Nanum Myeongjo", AppleMyungjo, Batang, serif;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1.5rem; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif; word-break: keep-all; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid #bd6435; outline-offset: 4px; }
+.wrap { width: min(86%, 1180px); margin-inline: auto; }
+.skip { position: fixed; left: 1rem; top: -8rem; z-index: 5; background: var(--ink); color: white; padding: .8rem; }
+.skip:focus { top: 1rem; }
+.mast { display: flex; align-items: center; justify-content: space-between; min-height: 80px; border-bottom: 1px solid var(--ink); }
+.brand { display: inline-flex; gap: .65rem; align-items: center; font: 700 1.25rem var(--serif); letter-spacing: -.05em; }
+.mark { width: 24px; height: 24px; display: inline-block; background: conic-gradient(from 90deg at 63% 39%, #ac533b 25%, #304743 0 50%, #6f8476 0 75%, #d0b17b 0); transform: rotate(-3deg); }
+nav { display: flex; gap: 1.7rem; font-size: .94rem; }
+nav a { padding-block: .8rem; }
+nav a:hover { text-decoration: underline; text-underline-offset: .4em; }
+.hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3%; padding-block: clamp(3.5rem,6.8vw,6.8rem); }
+.roman { margin: 0 0 1.15rem .2rem; font: 650 .84rem/1.3 Arial, sans-serif; letter-spacing: .3em; color: var(--clay); }
+h1,h2,p { margin: 0; }
+h1 { font: 700 clamp(3.5rem,6.7vw,6.7rem)/1.14 var(--serif); letter-spacing: -.09em; }
+.tag { font: 400 clamp(1.25rem,1.75vw,1.65rem)/1.65 var(--serif); letter-spacing: -.04em; margin: 1.4rem 0 1.85rem; }
+.play { display: inline-flex; align-items: center; gap: .7rem; background: var(--ink); color: var(--paper); border-radius: 2px; padding: .9rem 1.35rem; font-size: .96rem; font-weight: 650; }
+.play i { width: 0; height: 0; border-block: 5px solid transparent; border-left: 8px solid currentColor; }
+.play:hover { background: #39544e; }
+.art { width: 96%; margin-inline: auto; position: relative; aspect-ratio: 1.29; isolation: isolate; }
+.record { position: absolute; width: 72%; aspect-ratio: 1; border-radius: 50%; top: 4%; right: 1%; transform: rotate(16deg); background: repeating-radial-gradient(circle, transparent 0 1.1px,#a9aa981a 1.5px,transparent 2.7px), conic-gradient(#202420,#555950 40deg,#1f2220 75deg,#292b27 130deg,#606359 168deg,#232522 211deg,#53574d 265deg,#202220 320deg,#202420); box-shadow: 2px 6px 8px #24312823; border: 2px solid #292d29; }
+.sleeve { position: absolute; width: 73%; aspect-ratio: 1; top: 2%; left: 4%; transform: rotate(-6deg); background: #b2a58c; box-shadow: 1px 2px 2px #342d2030, 3px 12px 17px #332c1f22; overflow: hidden; }
+.patch { position: absolute; background: var(--fabric); left: var(--x); top: var(--y); width: var(--w); height: var(--h); box-shadow: inset 1px 1px #fbf3d653, inset 3px 3px #342b242b, inset -1px -1px #3d362638; }
+.indigo { --x:0%; --y:0%; --w:57%; --h:61%; --fabric:#294e58; }
+.flax { --x:57%; --y:0%; --w:24%; --h:27%; --fabric:#c1b28c; }
+.jade { --x:81%; --y:0%; --w:19%; --h:27%; --fabric:#718d81; }
+.chestnut { --x:57%; --y:27%; --w:12%; --h:34%; --fabric:#864f3e; }
+.russet { --x:69%; --y:27%; --w:31%; --h:47%; --fabric:#b46649; }
+.oat { --x:0%; --y:61%; --w:27%; --h:39%; --fabric:#c1aa7d; }
+.celadon { --x:27%; --y:61%; --w:42%; --h:23%; --fabric:#869989; }
+.coal { --x:27%; --y:84%; --w:26%; --h:16%; --fabric:#344946; }
+.ochre { --x:53%; --y:84%; --w:16%; --h:16%; --fabric:#af884d; }
+.cream { --x:69%; --y:74%; --w:31%; --h:15%; --fabric:#d7c8ac; }
+.blue { --x:69%; --y:89%; --w:31%; --h:11%; --fabric:#59727b; }
+.sleeve::after { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg,transparent 0 1px,#322c241f 1.3px,transparent 2.4px),repeating-linear-gradient(89deg,transparent 0 1px,#fff9e32e 1.3px,transparent 2.8px),linear-gradient(118deg,transparent 20%,#fff4d112 38%,#2c281b0e 57%,transparent 78%); }
+.imprint { position: absolute; left: 7%; top: 8%; color: #f1e6cf; }
+.imprint span { display:block; font: 700 clamp(1.45rem,3.1vw,3rem)/1.1 var(--serif); letter-spacing:-.08em; }
+.imprint small { display:block; margin-top: .7em; font: 600 .66rem Arial,sans-serif; letter-spacing:.13em; }
+.listen { border-top: 1px solid var(--ink); padding-block: 1.75rem 3rem; }
+.listen h2 { font: 700 1.5rem var(--serif); letter-spacing: -.06em; }
+.services { display: grid; grid-template-columns: repeat(5,1fr); list-style:none; padding:0; margin:1.45rem 0 0; }
+.services li + li { border-left: 1px solid var(--line); }
+.services a { display:flex; flex-direction:column; gap:.45rem; padding: .5rem 0 .5rem clamp(1rem,2.6vw,2.6rem); }
+.services li:first-child a { padding-left: 0; }
+.services b { font: 650 clamp(1.15rem,1.65vw,1.6rem)/1.3 Arial,sans-serif; letter-spacing:-.055em; }
+.services span { font-size: .9rem; color:#51594f; }
+.services a:hover b { color:var(--clay); text-decoration:underline; text-underline-offset:.2em; }
+footer { color:#f5f0e4; background:var(--ink); }
+.foot { display:flex; align-items:center; justify-content:space-between; gap:2rem; padding-block:2.5rem; }
+.foot p { font: 400 1.32rem/1.6 var(--serif); letter-spacing:-.03em; }
+.foot h2 { font-size:.9rem; font-weight:500; color:#cbd1c4; margin-bottom:.5rem; }
+.foot a { font-weight:550; text-decoration:underline; text-underline-offset:.25em; }
+@media(max-width:700px) {
+  .wrap { width:88%; }
+  .mast { min-height:64px; }
+  nav { gap:1rem; }
+  .hero { grid-template-columns:1fr; gap:2rem; padding-block:2.75rem 2rem; }
+  h1 { font-size:clamp(3rem,12vw,4.75rem); }
+  .tag { margin:1rem 0 1.25rem; }
+  .art { width:min(94%,370px); }
+  .imprint span { font-size:clamp(1.6rem,7vw,2.3rem); }
+  .listen { padding-block:1.5rem 2rem; }
+  .services { grid-template-columns:1fr; margin-top:.75rem; }
+  .services li + li { border-left:0; }
+  .services li { border-bottom:1px solid var(--line); }
+  .services a { flex-direction:row; align-items:center; justify-content:space-between; padding:1rem 0; }
+  .foot { flex-direction:column; align-items:flex-start; gap:1.5rem; }
+}
